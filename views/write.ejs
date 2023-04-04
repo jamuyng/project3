@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/main.css" />
+  </head>
+  <style>
+    .input_wrap {
+      display: block;
+      max-width: 700px;
+      margin: auto;
+    }
+    .photo {
+      padding: 6rem 6rem;
+      margin: auto;
+      display: flex;
+    }
+    .maintext {
+      padding: 3rem 6rem;
+      margin: 5rem auto;
+      display: flex;
+      border-radius: 0.5rem;
+    }
+    .btnclick {
+      max-width: 700px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .okbtn {
+      padding: 0.5rem 4rem;
+      border: none;
+      cursor: pointer;
+    }
+    .okbtn:hover {
+      background-color: #ff6b00;
+      color: white;
+    }
+  </style>
+  <body>
+    <%- include('nav.ejs') %>
+    <form action="/add" method="post">
+      <div class="input_wrap">
+        <input
+          class="photo"
+          type="text"
+          name="photo"
+          placeholder="+사진을 첨부해 주세요"
+        />
+        <input
+          class="maintext"
+          type="text"
+          name="maintext"
+          placeholder="바른말 고운말을 사용해주세요"
+        />
+      </div>
+      <div class="btnclick">
+        <input class="okbtn" type="submit" value="등록하기" />
+      </div>
+    </form>
+  </body>
+</html>
